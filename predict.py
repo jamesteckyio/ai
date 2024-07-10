@@ -8,7 +8,7 @@ from patches import Patches, PatchEncoder
 image_size = 200
 class_names = ['cats', 'dogs']
 # Load the  model
-model = keras.models.load_model('./models/transformer_model.keras')
+model = keras.models.load_model('./models/cnn.keras')
 
 test_dir=pathlib.Path("./dog_cat_dataset/testing_set")
 cat_test= list(test_dir.glob('cats/*'))
