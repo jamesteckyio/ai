@@ -8,7 +8,7 @@ from patches import Patches, PatchEncoder
 image_size = 200
 class_names = ['cats', 'dogs']
 # Load the  model
-model = keras.models.load_model('./models/cnn.keras')
+model = keras.models.load_model('./models/vit.keras')
 
 test_dir=pathlib.Path("./dog_cat_dataset/testing_set")
 cat_test= list(test_dir.glob('cats/*'))
@@ -18,7 +18,7 @@ print("Cat length: ", len(cat_test))
 print("Dog length: ", len(dog_test))
 
 
-predict_index = 45
+predict_index = 79
 # Grab an image from the test dataset.
 image = cat_test[predict_index]
 img = cv2.imread(str(image))
